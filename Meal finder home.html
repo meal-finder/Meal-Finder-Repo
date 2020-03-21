@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Meal Finder</title>
+    <link rel="stylesheet" href="framework.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <body id="page">
@@ -23,12 +24,27 @@
           <div class="tile">
             <div class="tile is-parent is-vertical">
               <article class="tile is-child notification is-primary">
+
+                <!-- This is the ingredients box -->
                 <p class="title">Ingredients</p>
                 <p class="subtitle">Top tile</p>
+                <input class="input" type="text" placeholder="Text input">
+                <input class="input" type="text" placeholder="Text input">
+                <input class="input" type="text" placeholder="Text input">
               </article>
+
               <article class="tile is-child notification is-warning">
                 <p class="title">Missing ingredients</p>
                 <p class="subtitle">You're so close!</p>
+
+                <!-- This is a list box -->
+                <div id="myDIV" class="header">
+                  <h2>My To Do List</h2>
+                  <input type="text" id="myInput" placeholder="Title...">
+                  <span onclick="newElement()" class="addBtn" >Add</span>
+                </div>
+                <ul id="myUL"></ul>
+
               </article>
             </div>
             <div class="tile is-parent">
@@ -81,9 +97,9 @@
     
     
        
-    <script   src="https://code.jquery.com/jquery-3.4.1.min.js"   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="   crossorigin="anonymous"></script>
-  <script defer="" src="./Meal Finder Home_files/all.js.download">
-  </script>
+  <script   src="https://code.jquery.com/jquery-3.4.1.min.js"   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="   crossorigin="anonymous"></script>
+  <script defer="" src="./Meal Finder Home_files/all.js.download"></script>
+  <script src="./missing-ingr.js"></script>
 ​
   <script src="index.js"></script>
     </body></html>
