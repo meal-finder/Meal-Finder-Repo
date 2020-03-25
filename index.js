@@ -32,7 +32,3 @@ $("#find").on("click", function () {
 	});
 
 });
-
-//RECIPES//
-
-// Here we grab the text from the input box
