@@ -2,12 +2,12 @@
 
 //FIND MEAL
 
-$("#find").on("click",function(){
+$("#find").on("click", function () {
 	var ingredients = [];
 	$(".input").each(function () {
 		ingredients.push($(this).val());
 	});
-	
+
 	var settings = {
 		"async": true,
 		"crossDomain": true,
@@ -17,19 +17,18 @@ $("#find").on("click",function(){
 			"x-rapidapi-host": "webknox-recipes.p.rapidapi.com",
 			"x-rapidapi-key": "5055de4237mshb8184148441534fp1f5c84jsnf1aa75b94cd0"
 		},
-	   
+
 	}
 	$.ajax(settings).then(function (response) {
 		console.log(response);
+		response.forEach(response => {
+			var recipeDiv = $("<div>")
+			recipeDiv.text(response.title)
+			$("#recipes").append(recipeDiv)
+			recipeDiv.hover(function (event) {
+				$("#recipe-image").attr("src", response.image)
+			})
+		});
 	});
-	
+
 });
-
-//RECIPES//
-
-// Here we grab the text from the input box
-var recipes = $("#recipes").val();
-
-
-//Maps
-
