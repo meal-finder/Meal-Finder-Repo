@@ -29,3 +29,7 @@ $("#find").on("click",function(){
 
 // Here we grab the text from the input box
 var recipes = $("#recipes").val();
+
+
+//Maps
+
