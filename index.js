@@ -23,8 +23,14 @@ $("#find").on("click", function () {
 		console.log(response);
 		response.forEach(response => {
 			var recipeDiv = $("<div>")
+			var recipeP = $("<p>")
+			//Display title of recipe//
 			recipeDiv.text(response.title)
 			$("#recipes").append(recipeDiv)
+			//Display needed ingredients//
+			recipeP.text(response.missedIngredients[0].original)
+			$("#recipes").append(recipeP)
+			//Show image by hover//
 			recipeDiv.hover(function (event) {
 				$("#recipe-image").attr("src", response.image)
 			})
@@ -33,6 +39,4 @@ $("#find").on("click", function () {
 
 });
 
-//RECIPES//
 
-// Here we grab the text from the input box
