@@ -3,6 +3,8 @@
 //FIND MEAL
 
 $("#find").on("click", function () {
+	$("#recipes").empty()
+	//location.reload(true);
 	var ingredients = [];
 	$(".input").each(function () {
 		ingredients.push($(this).val());
@@ -22,7 +24,7 @@ $("#find").on("click", function () {
 	$.ajax(settings).then(function (response) {
 		console.log(response);
 		response.forEach(response => {
-			var recipeDiv = $("<h4>")
+			var recipeDiv = $("<h4>").addClass("tag is-link is-light")
 			var recipeP = $("<p>")
 			var recipeP2 = $("<p>")
 			var recipeP3 = $("<p>")
@@ -41,8 +43,9 @@ $("#find").on("click", function () {
 				$("#recipe-image").attr("src", response.image)
 			})
 		});
+		
 	});
-
+	
 });
 
 
